@@ -22,8 +22,8 @@ import {
 const translations = {
     ES: {
         hero: {
-            role: "Desarrollador Backend",
-            bio: "Estudiante avanzado de Ingenieria En Informatica. Desarrollador junior backend, arquitectura y DevOps, como asi tambien la optimizacion de bases de datos relacionales.",
+            role: "Desarrollador Full Stack",
+            bio: "Estudiante avanzado de Ingenieria En Informatica. Desarrollador junior Full Stack, arquitectura y DevOps, como asi tambien la optimizacion de bases de datos relacionales.",
             cta: "Ver Proyectos",
         },
         sections: {
@@ -39,29 +39,29 @@ const translations = {
         },
         projects: [
             {
-                title: "API de Comercio Electrónico",
-                desc: "Microservicios escalables construidos con FastAPI y Redis para gestión de inventario en tiempo real.",
-                tech: ["Python", "FastAPI", "Redis", "PostgreSQL"],
-                link: "https://github.com/pmirazo/ecommerce-api",
+                title: "Viking App - Backend API",
+                desc: "Infraestructura central para el ecosistema Viking App. Gestiona el ciclo de vida completo de reparaciones, desde la recepción hasta la entrega. Arquitectura monolítica modular.",
+                tech: ["Java", "Spring Boot", "MySQL", "Docker", "JWT"],
+                link: "#",
             },
             {
-                title: "Sistema de Gestión Hospitalaria",
-                desc: "Arquitectura monolítica modular con Spring Boot, implementando seguridad JWT y reportes automatizados.",
-                tech: ["Java", "Spring Boot", "MySQL", "Docker"],
-                link: "https://github.com/pmirazo/hospital-system",
+                title: "Miel-IA - Backend | Intelligent Medical Diagnosis",
+                desc: "API RESTful de alto rendimiento que orquestra un ensamble híbrido de ML (Random Forest, XGBoost, Regresión Logística) para la detección temprana del Síndrome de Guillain-Barré.",
+                tech: ["Python", "FastAPI", "TensorFlow/Keras", "Scikit-Learn"],
+                link: "#",
             },
             {
-                title: "Motor de Análisis de Datos",
-                desc: "Pipeline de procesamiento de datos masivos utilizando Flask y procesos asíncronos con Celery.",
-                tech: ["Python", "Flask", "Celery", "RabbitMQ"],
-                link: "https://github.com/pmirazo/data-engine",
+                title: "Miel-IA - Frontend | Intelligent Medical Diagnosis",
+                desc: "Interfaz web moderna para el ecosistema Miel-IA. Paneles personalizados para médicos, administradores y pacientes con visualizaciones de riesgo y explicabilidad (XAI).",
+                tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+                link: "#",
             },
         ],
     },
     EN: {
         hero: {
-            role: "Backend Developer",
-            bio: "Advanced student of Computer Engineering. Junior backend developer, architecture and DevOps, as well as relational database optimization.",
+            role: "Full Stack Developer",
+            bio: "Advanced student of Computer Engineering. Junior Full Stack developer, architecture and DevOps, as well as relational database optimization.",
             cta: "View Projects",
         },
         sections: {
@@ -77,22 +77,22 @@ const translations = {
         },
         projects: [
             {
-                title: "E-commerce API",
-                desc: "Scalable microservices built with FastAPI and Redis for real-time inventory management.",
-                tech: ["Python", "FastAPI", "Redis", "PostgreSQL"],
-                link: "https://github.com/pmirazo/ecommerce-api",
+                title: "Viking App - Backend API",
+                desc: "Core infrastructure for the Viking App ecosystem. Manages the entire repair lifecycle, from device intake to final delivery. Modular monolithic architecture.",
+                tech: ["Java", "Spring Boot", "MySQL", "Docker", "JWT"],
+                link: "#",
             },
             {
-                title: "Hospital Management System",
-                desc: "Modular monolithic architecture with Spring Boot, implementing JWT security and automated reporting.",
-                tech: ["Java", "Spring Boot", "MySQL", "Docker"],
-                link: "https://github.com/pmirazo/hospital-system",
+                title: "Miel-IA - Backend | Intelligent Medical Diagnosis",
+                desc: "High-performance RESTful API orchestrating a hybrid ML ensemble (Random Forest, XGBoost, Logistic Regression) for the early detection of Guillain-Barré Syndrome.",
+                tech: ["Python", "FastAPI", "TensorFlow/Keras", "Scikit-Learn"],
+                link: "#",
             },
             {
-                title: "Data Analytics Engine",
-                desc: "Massive data processing pipeline using Flask and asynchronous processing with Celery.",
-                tech: ["Python", "Flask", "Celery", "RabbitMQ"],
-                link: "https://github.com/pmirazo/data-engine",
+                title: "Miel-IA - Frontend | Intelligent Medical Diagnosis",
+                desc: "Modern web interface for the Miel-IA ecosystem. Tailored dashboards for doctors, admins, and patients with risk visualizations and explainability (XAI).",
+                tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+                link: "#",
             },
         ],
     },
