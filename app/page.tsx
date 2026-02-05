@@ -166,22 +166,22 @@ export default function Portfolio() {
                         <SkillCard
                             icon={<Code2 className="text-indigo-400" />}
                             title={t.skills.languages}
-                            items={["Python", "Java", "Go", "SQL"]}
+                            items={["Python", "Java", "TypeScript", "SQL"]}
                         />
                         <SkillCard
                             icon={<Server className="text-indigo-400" />}
                             title={t.skills.frameworks}
-                            items={["FastAPI", "Flask", "Spring Boot"]}
+                            items={["FastAPI", "Flask", "Spring Boot", "NextJS", "Expo"]}
                         />
                         <SkillCard
                             icon={<Database className="text-indigo-400" />}
                             title={t.skills.databases}
-                            items={["PostgreSQL", "MySQL", "Redis", "MongoDB"]}
+                            items={["PostgreSQL", "MySQL"]}
                         />
                         <SkillCard
                             icon={<Layers className="text-indigo-400" />}
                             title={t.skills.devops}
-                            items={["Docker", "Kubernetes", "CI/CD", "AWS"]}
+                            items={["Docker", "Azure", "CI/CD", "GitHub ACtions", "OpenStack"]}
                         />
                     </div>
                 </section>
