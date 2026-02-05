@@ -27,7 +27,7 @@ const translations = {
             cta: "Ver Proyectos",
         },
         sections: {
-            stack: "Stack Tecnológico",
+            stack: "Stack",
             projects: "Proyectos Destacados",
             contact: "Contacto",
         },
@@ -65,7 +65,7 @@ const translations = {
             cta: "View Projects",
         },
         sections: {
-            stack: "Tech Stack",
+            stack: "Stack",
             projects: "Featured Projects",
             contact: "Contact",
         },
@@ -181,7 +181,7 @@ export default function Portfolio() {
                         <SkillCard
                             icon={<Layers className="text-indigo-400" />}
                             title={t.skills.devops}
-                            items={["Docker", "Azure", "CI/CD", "GitHub ACtions", "OpenStack"]}
+                            items={["Docker", "Azure", "CI/CD", "GitHub Actions", "OpenStack"]}
                         />
                     </div>
                 </section>
