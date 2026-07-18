@@ -197,17 +197,17 @@ export default function Portfolio() {
                         <SkillCard
                             icon={<Server className="text-indigo-400" />}
                             title={t.skills.frameworks}
-                            items={["FastAPI", "Flask", "Spring Boot"]}
+                            items={["FastAPI", "Flask", "Spring Boot", "React", "Gin"]}
                         />
                         <SkillCard
                             icon={<Database className="text-indigo-400" />}
                             title={t.skills.databases}
-                            items={["PostgreSQL", "MySQL", "Redis", "MongoDB"]}
+                            items={["PostgreSQL", "MySQL", "MariaDB", "OracleSQL", "SQLite"]}
                         />
                         <SkillCard
                             icon={<Layers className="text-indigo-400" />}
                             title={t.skills.devops}
-                            items={["Docker", "Kubernetes", "CI/CD", "AWS"]}
+                            items={["Docker", "GitHub Actions", "CI/CD", "Traefik"]}
                         />
                     </div>
                 </section>
