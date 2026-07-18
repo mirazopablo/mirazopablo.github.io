@@ -39,10 +39,17 @@ const translations = {
         },
         projects: [
             {
-                title: "Viking App - Backend API",
-                desc: "Infraestructura central para el ecosistema Viking App. Gestiona el ciclo de vida completo de reparaciones, desde la recepción hasta la entrega. Arquitectura monolítica modular.",
-                tech: ["Java", "Spring Boot", "MySQL", "Docker", "JWT"],
-                link: "https://github.com/mirazopablo/Viking-App-Back",
+                title: "Viking App - Backend API (Go/Gin/GORM)",
+                desc: "Servicio backend de alto rendimiento reestructurado en Go (Golang) para el ecosistema Viking App. Arquitectura limpia con ultra baja latencia y concurrencia nativa.",
+                tech: ["Go", "Gin", "GORM", "PostgreSQL", "Docker", "JWT"],
+                link: "https://github.com/mirazopablo/viking-app-go",
+            },
+            {
+                title: "Viking App - Web Platform",
+                desc: "Plataforma web empresarial para la gestión de talleres y servicio técnico de Viking App. Incluye portal público de seguimiento en tiempo real y panel operativo privado con RBAC.",
+                tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Docker"],
+                link: "https://github.com/mirazopablo/Viking-App-Web",
+                liveUrl: "https://viking-app.zondasolutions.com/",
             },
             {
                 title: "Miel-IA - Backend | Intelligent Medical Diagnosis",
@@ -55,6 +62,12 @@ const translations = {
                 desc: "Interfaz web moderna para el ecosistema Miel-IA. Paneles personalizados para médicos, administradores y pacientes con visualizaciones de riesgo y explicabilidad (XAI).",
                 tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
                 link: "https://github.com/mirazopablo/miel-ia-front",
+            },
+            {
+                title: "Viking App - Backend API (Legacy - Java/Spring Boot)",
+                desc: "Versión monolítica y fundación original del ecosistema Viking App, desarrollada como parte de mi formación académica. Mantenida actualmente como proyecto Legacy.",
+                tech: ["Java", "Spring Boot", "MySQL", "Docker", "JWT"],
+                link: "https://github.com/mirazopablo/Viking-App-Back",
             },
         ],
     },
@@ -77,10 +90,17 @@ const translations = {
         },
         projects: [
             {
-                title: "Viking App - Backend API",
-                desc: "Core infrastructure for the Viking App ecosystem. Manages the entire repair lifecycle, from device intake to final delivery. Modular monolithic architecture.",
-                tech: ["Java", "Spring Boot", "MySQL", "Docker", "JWT"],
-                link: "https://github.com/mirazopablo/Viking-App-Back",
+                title: "Viking App - Backend API (Go/Gin/GORM)",
+                desc: "High-performance backend service reengineered in Go (Golang) for the Viking App ecosystem. Clean architecture featuring ultra-low latency and native concurrency.",
+                tech: ["Go", "Gin", "GORM", "PostgreSQL", "Docker", "JWT"],
+                link: "https://github.com/mirazopablo/viking-app-go",
+            },
+            {
+                title: "Viking App - Web Platform",
+                desc: "Enterprise-grade web platform for workshop and technical repair management. Features a public real-time tracking portal and a private operational dashboard with RBAC.",
+                tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Docker"],
+                link: "https://github.com/mirazopablo/Viking-App-Web",
+                liveUrl: "https://viking-app.zondasolutions.com/",
             },
             {
                 title: "Miel-IA - Backend | Intelligent Medical Diagnosis",
@@ -93,6 +113,12 @@ const translations = {
                 desc: "Modern web interface for the Miel-IA ecosystem. Tailored dashboards for doctors, admins, and patients with risk visualizations and explainability (XAI).",
                 tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
                 link: "https://github.com/mirazopablo/miel-ia-front",
+            },
+            {
+                title: "Viking App - Backend API (Legacy - Java/Spring Boot)",
+                desc: "Monolithic version and original foundation of the Viking App ecosystem, developed as part of my academic training. Currently maintained as a legacy project.",
+                tech: ["Java", "Spring Boot", "MySQL", "Docker", "JWT"],
+                link: "https://github.com/mirazopablo/Viking-App-Back",
             },
         ],
     },
@@ -166,22 +192,22 @@ export default function Portfolio() {
                         <SkillCard
                             icon={<Code2 className="text-indigo-400" />}
                             title={t.skills.languages}
-                            items={["Python", "Java", "TypeScript", "SQL"]}
+                            items={["Python", "Java", "Go", "SQL"]}
                         />
                         <SkillCard
                             icon={<Server className="text-indigo-400" />}
                             title={t.skills.frameworks}
-                            items={["FastAPI", "Flask", "Spring Boot", "NextJS", "Expo"]}
+                            items={["FastAPI", "Flask", "Spring Boot"]}
                         />
                         <SkillCard
                             icon={<Database className="text-indigo-400" />}
                             title={t.skills.databases}
-                            items={["PostgreSQL", "MySQL"]}
+                            items={["PostgreSQL", "MySQL", "Redis", "MongoDB"]}
                         />
                         <SkillCard
                             icon={<Layers className="text-indigo-400" />}
                             title={t.skills.devops}
-                            items={["Docker", "Azure", "CI/CD", "GitHub Actions", "OpenStack"]}
+                            items={["Docker", "Kubernetes", "CI/CD", "AWS"]}
                         />
                     </div>
                 </section>
@@ -239,17 +265,26 @@ function SkillCard({ icon, title, items }: { icon: React.ReactNode; title: strin
     )
 }
 
-function ProjectCard({ title, desc, tech, link }: { title: string; desc: string; tech: string[]; link: string }) {
+function ProjectCard({ title, desc, tech, link, liveUrl }: { title: string; desc: string; tech: string[]; link: string; liveUrl?: string }) {
     return (
-        <div className="group relative bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-all flex flex-col">
-            <div className="p-8 flex-1">
+        <div className={`group relative bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-all flex flex-col ${liveUrl ? "cursor-pointer" : ""}`}>
+            {liveUrl && (
+                <a
+                    href={liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 z-0"
+                    aria-label={`Ver app en vivo: ${title}`}
+                />
+            )}
+            <div className={`p-8 flex-1 relative z-10 ${liveUrl ? "pointer-events-none" : ""}`}>
                 <div className="flex justify-between items-start mb-4">
                     <Cpu className="text-indigo-500 opacity-50" size={32} />
                     <a
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-zinc-800 rounded-lg text-zinc-300 hover:text-white hover:bg-indigo-600 transition-all"
+                        className="p-2 bg-zinc-800 rounded-lg text-zinc-300 hover:text-white hover:bg-indigo-600 transition-all pointer-events-auto relative z-20"
                     >
                         <ExternalLink size={20} />
                     </a>
