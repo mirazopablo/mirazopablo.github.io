@@ -39,6 +39,12 @@ const translations = {
         },
         projects: [
             {
+                title: "CVify - Creador de CVs optimizado para ATS",
+                desc: "Herramienta Open Source y enfocada en la privacidad para la creación de currículums optimizados para lectura por sistemas ATS (Applicant Tracking Systems) con vista previa de impresión en tiempo real y exportación directa a PDF.",
+                tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+                link: "https://github.com/mirazopablo/CVify",
+            },
+            {
                 title: "Viking App - Backend API (Go/Gin/GORM)",
                 desc: "Servicio backend de alto rendimiento reestructurado en Go (Golang) para el ecosistema Viking App. Arquitectura limpia con ultra baja latencia y concurrencia nativa.",
                 tech: ["Go", "Gin", "GORM", "PostgreSQL", "Docker", "JWT"],
@@ -89,6 +95,12 @@ const translations = {
             devops: "Infrastructure & DevOps",
         },
         projects: [
+            {
+                title: "CVify - ATS Resume Builder",
+                desc: "Privacy-first, open-source Resume & CV Builder optimized for Applicant Tracking Systems (ATS) with live print preview, multi-layout rendering, and direct high-fidelity PDF export.",
+                tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+                link: "https://github.com/mirazopablo/CVify",
+            },
             {
                 title: "Viking App - Backend API (Go/Gin/GORM)",
                 desc: "High-performance backend service reengineered in Go (Golang) for the Viking App ecosystem. Clean architecture featuring ultra-low latency and native concurrency.",
